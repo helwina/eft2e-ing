@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <%= csrf_meta_tags %>
+  <title>Eft2e-<%= @page_title%></title>
+  <%= stylesheet_link_tag    'application', media: 'all' %>
+</head>
+
+<body>
+  <div class="content">
+    <%= render(:partial => 'layouts/header')%>
+    <%= render(:partial => 'layouts/banner')%>
+        <%= yield %>
+  </div>
+    <%= render(:partial => 'layouts/footer')%>
+
+  <%= javascript_include_tag 'application' %>
+</body>
+
+</html>

@@ -1,0 +1,155 @@
+$duration: 1.5s;
+
+@media  screen and (max-width:1024px ) {
+  .header-icon {
+    position: relative;
+    display: block;
+    float: right;
+    width: 48px;
+    height: 48px;
+    cursor: pointer;
+    &:after {
+      content: '';
+      position: absolute;
+      display: block;
+      width: 1rem;
+      height: 0;
+      top: 6px;
+      right: 15px;
+      box-shadow: 0 10px 0 1px #fff, 0 16px 0 1px #fff, 0 22px 0 1px #fff;
+    }
+  }
+
+  .menu-hide {
+    right: -200px;
+    transition: $duration;
+  }
+
+  .menu {
+    right: 0;
+    transition: $duration;
+  }
+
+  .menu, .menu-hide {
+    position: absolute;
+    top: 48px;
+    padding: 0;
+    font-size: 16px;
+  }
+
+  .wrap {
+    margin: 0 auto;
+  }
+
+  ul li a {
+    display: block;
+    background-color: darken($green, 10%);
+    border-bottom: 2px solid lighten($green, 10%);
+    text-decoration: none;
+    padding: 4px;
+    text-transform: uppercase;
+    &:hover {
+      background: $green;
+    }
+  }
+
+  ul ul {
+    margin: 0;
+    padding: 0;
+    height: 0;
+    overflow: hidden;
+    transition: $duration;
+    transition-delay: $duration;
+    li a{
+      font-size: 14px;
+      background: lighten($green, 10%);
+      border-bottom: 2px solid darken($green, 10%);
+      &:hover {
+        background: darken($green, 10%);
+      }
+    }
+  }
+
+  ul li:hover ul.hover-two {
+    height: 48px;
+    transition: $duration;
+  }
+
+  ul li:hover ul.hover-nine {
+    height: 216px;
+    transition: $duration;
+  }
+}
+
+@media screen and (min-width: 1024px){
+  .header-icon {
+    display: none;
+  }
+
+  nav {
+    text-align: center;
+  }
+
+   ul li:hover > ul {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+  }
+
+   ul {
+    padding: 0 20px;
+    position: relative;
+    display: inline-block;
+    li {
+      float: left;
+      border-right: 1px solid lighten($green, 10%);
+      border-left: 1px solid lighten($green, 10%);
+      &:hover {
+        background: lighten($green, 10%);
+      }
+    }
+  }
+
+  ul li:first-child {
+    border-left: 2px solid lighten($green, 10%);
+  }
+
+  ul li:last-child {
+    border-right: 2px solid lighten($green, 10%);
+  }
+
+  ul li a {
+    display: block;
+    padding: 15px 10px;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+
+  ul ul {
+    visibility: hidden;
+    opacity: 0;
+    display: block;
+    transition: all $duration ease;
+    background: lighten($green, 10%);
+    padding: 0;
+    position: absolute;
+    top: 100%;
+    li {
+      float: none;
+      border-top: 1px solid $green;
+      border-bottom: 1px solid $green;
+      position: relative;
+      a {
+        padding: 15px 14px;
+        color: #fff;
+        &:hover {
+          background: $green;
+        }
+      }
+    }
+  }
+
+  .dropdown:after {
+    content: ' \25bc';
+  }
+}

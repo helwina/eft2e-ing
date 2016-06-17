@@ -1,0 +1,69 @@
+<header>
+  <div id="header-icon" class="header-icon"></div>
+  <nav class="wrap">
+    <h1 class="header-title">bureau d'etude eft2e ingénierie</h1>
+    <ul class="menu-hide">
+      <li>
+        <%= link_to('<', {:controller => 'pages', :action => 'home'})%>
+      </li>
+      <li>
+        <%= link_to('société', {:controller => 'pages', :action => 'societe'})%>
+      </li>
+      <li>
+        <a class="dropdown">ressources</a>
+        <ul class="hover-two">
+          <li>
+            <%= link_to('humaines', {:controller => 'pages', :action => 'ressources_humaines'})%>
+          </li>
+          <li>
+            <%= link_to('matérielles', {:controller => 'pages', :action => 'ressources_materielles'})%>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <%= link_to('missions', {:controller => 'pages', :action => 'missions'})%>
+      </li>
+      <li>
+        <a class="dropdown">nos réalisations</a>
+        <ul class="hover-nine ">
+          <li>
+            <%= link_to('habitat collectif', {:controller => 'pages', :action => 'habitat_collectif'})%>
+          </li>
+          <li>
+            <%= link_to('habitat individuel', {:controller => 'pages', :action => 'habitat_individuel'})%>
+          </li>
+          <li>
+            <%= link_to('tertiaire', {:controller => 'pages', :action => 'tertiaire'})%>
+          </li>
+          <li>
+            <%= link_to('social', {:controller => 'pages', :action => 'social'})%>
+          </li>
+          <li>
+            <%= link_to('culurel', {:controller => 'pages', :action => 'culturel'})%>
+          </li>
+          <li>
+            <%= link_to('enseignement', {:controller => 'pages', :action => 'enseignement'})%>
+          </li>
+          <li>
+            <%= link_to('sportif', { :controller => 'pages',:action => 'sportif'})%>
+          </li>
+          <li>
+            <%= link_to('industriel', {:controller => 'pages', :action => 'industriel'})%>
+          </li>
+          <li>
+            <%= link_to('santé', {:controller => 'pages', :action => 'sante'})%>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <%= link_to('presse', {:controller => 'pages', :action => 'presse'})%>
+      </li>
+      <li>
+        <%= link_to('contact', {:controller => 'pages', :action => 'contact'})%>
+      </li>
+      <li>
+        <%= link_to('>', {:controller => 'pages', :action => 'galerie'})%>
+      </li>
+    </ul>
+  </nav>
+</header>

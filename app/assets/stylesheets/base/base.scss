@@ -1,0 +1,41 @@
+* {
+  box-sizing :border-box;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+hr {
+  background: url(asset-path("hr-green.png"))no-repeat left/70%;
+  height: 10px;
+  border: none;
+}
+
+li {
+  list-style-type: none;
+}
+
+p {
+  color:$blue-grey;
+}
+
+.plaquette {
+  color: #000;
+}
+
+@media screen and (min-width: 640px) {
+  .content {
+    width: 90%;
+    margin:auto;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .content {
+    width: 80%;
+    margin:auto;
+  }
+}
+
